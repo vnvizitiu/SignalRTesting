@@ -1,0 +1,7 @@
+﻿namespace SignalRWebApp
+{
+    class HubMessage
+    {
+
+    }
+}
