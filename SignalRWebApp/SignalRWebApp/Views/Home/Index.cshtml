@@ -92,3 +92,18 @@
         </ul>
     </div>
 </div>
+
+@section Scripts
+{
+    <script>
+        $(document).ready(() => {
+            const connection = new signalR.HubConnectionBuilder().withUrl("/hub").build();
+
+            connection.on("welcome", (messages) => {
+                alert(messages);
+            });
+
+            connection.start().catch(err => console.error(err.toString()));
+        });
+    </script>
+}
