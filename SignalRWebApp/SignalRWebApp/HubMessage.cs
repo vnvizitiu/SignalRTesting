@@ -1,6 +1,6 @@
 ﻿namespace SignalRWebApp
 {
-    class HubMessage
+    public class HubMessage
     {
 
     }

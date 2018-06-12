@@ -8,9 +8,14 @@
     {
         public override async Task OnConnectedAsync()
         {
-            await Clients.All.SendAsync("welcome", new object[] { new HubMessage(), new HubMessage(), new HubMessage() });
+            await Welcome();
 
             await base.OnConnectedAsync();
+        }
+
+        public async Task Welcome()
+        {
+            await Clients.All.SendAsync("welcome", new[] { new HubMessage(), new HubMessage(), new HubMessage() });
         }
     }
 }
